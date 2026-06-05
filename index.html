@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>No Name — страхование в Польше</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f9fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #2563eb;
+    }
+
+    .langs button {
+      border: none;
+      background: #eef4ff;
+      padding: 7px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    .hero {
+      padding: 70px 7%;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1d4ed8;
+      padding: 8px 14px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 44px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: #4b5563;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .whatsapp {
+      background: #22c55e;
+      color: white;
+    }
+
+    .telegram {
+      background: #229ed9;
+      color: white;
+    }
+
+    .hero-card {
+      background: white;
+      padding: 28px;
+      border-radius: 24px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    }
+
+    .hero-card h3 {
+      margin-bottom: 12px;
+      color: #2563eb;
+    }
+
+    section {
+      padding: 55px 7%;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      color: #1d4ed8;
+    }
+
+    .companies {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      text-align: center;
+    }
+
+    .company {
+      background: white;
+      padding: 18px;
+      border-radius: 18px;
+      font-weight: bold;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    }
+
+    .contact {
+      background: #eaf3ff;
+      border-radius: 28px;
+      margin: 40px 7%;
+      padding: 40px;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 22px;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .grid,
+      .companies {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo" data-ru="No Name" data-ua="No Name" data-pl="No Name">No Name</div>
+
+    <div class="langs">
+      <button onclick="setLang('ru')">RU</button>
+      <button onclick="setLang('ua')">UA</button>
+      <button onclick="setLang('pl')">PL</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="badge"
+          data-ru="Страхование в Польше"
+          data-ua="Страхування в Польщі"
+          data-pl="Ubezpieczenia w Polsce">
+          Страхование в Польше
+        </span>
+
+        <h1
+          data-ru="Подберу выгодное страхование под вашу ситуацию"
+          data-ua="Підберу вигідне страхування під вашу ситуацію"
+          data-pl="Dobiorę korzystne ubezpieczenie do Twojej sytuacji">
+          Подберу выгодное страхование под вашу ситуацию
+        </h1>
+
+        <p
+          data-ru="Автострахование, страхование для детей и помощь с выбором полиса. Работаю по всей Польше, офис находится в Легнице."
+          data-ua="Автострахування, страхування для дітей та допомога з вибором поліса. Працюю по всій Польщі, офіс знаходиться в Легниці."
+          data-pl="Ubezpieczenia samochodowe, szkolne NNW oraz pomoc w wyborze polisy. Działam w całej Polsce, biuro znajduje się w Legnicy.">
+          Автострахование, страхование для детей и помощь с выбором полиса. Работаю по всей Польше, офис находится в Легнице.
+        </p>
+
+        <div class="buttons">
+          <a class="btn whatsapp" href="https://wa.me/48791178489" target="_blank">WhatsApp</a>
+          <a class="btn telegram" href="https://t.me/natya_2024" target="_blank">Telegram</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3
+          data-ru="Быстро и понятно"
+          data-ua="Швидко та зрозуміло"
+          data-pl="Szybko i jasno">
+          Быстро и понятно
+        </h3>
+
+        <p
+          data-ru="Напишите в WhatsApp или Telegram — я помогу подобрать подходящий вариант страховки."
+          data-ua="Напишіть у WhatsApp або Telegram — я допоможу підібрати відповідний варіант страхування."
+          data-pl="Napisz na WhatsApp lub Telegram — pomogę dobrać odpowiedni wariant ubezpieczenia.">
+          Напишите в WhatsApp или Telegram — я помогу подобрать подходящий вариант страховки.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title"
+        data-ru="Виды страхования"
+        data-ua="Види страхування"
+        data-pl="Rodzaje ubezpieczeń">
+        Виды страхования
+      </h2>
+
+      <div class="grid">
+        <div class="card"><h3>OC</h3><p>Odpowiedzialność Cywilna — обязательная страховка автомобиля.</p></div>
+        <div class="card"><h3>AC</h3><p>Autocasco — дополнительная защита автомобиля.</p></div>
+        <div class="card"><h3>Assistance</h3><p>Помощь в дороге при поломке или аварии.</p></div>
+        <div class="card"><h3>NNW</h3><p>Страхование от несчастных случаев.</p></div>
+        <div class="card"><h3>Zielona karta</h3><p>Страхование для поездок за границу.</p></div>
+        <div class="card"><h3>OC zagraniczne</h3><p>Страхование для иностранных автомобилей.</p></div>
+        <div class="card"><h3>NNW szkolne</h3><p>Страхование для детей и школьников.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title"
+        data-ru="Страховые компании"
+        data-ua="Страхові компанії"
+        data-pl="Firmy ubezpieczeniowe">
+        Страховые компании
+      </h2>
+
+      <div class="companies">
+        <div class="company">Link4</div>
+        <div class="company">UNIQA</div>
+        <div class="company">PZU</div>
+        <div class="company">Compensa</div>
+        <div class="company">Warta</div>
+        <div class="company">HDI</div>
+        <div class="company">Ergo Hestia</div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title"
+        data-ru="Как проходит оформление"
+        data-ua="Як проходить оформлення"
+        data-pl="Jak wygląda proces">
+        Как проходит оформление
+      </h2>
+
+      <div class="grid">
+        <div class="card"><h3>1</h3><p>Вы пишете в WhatsApp или Telegram.</p></div>
+        <div class="card"><h3>2</h3><p>Отправляете данные для расчёта страховки.</p></div>
+        <div class="card"><h3>3</h3><p>Получаете подходящие варианты.</p></div>
+        <div class="card"><h3>4</h3><p>Выбираете вариант и оформляете полис.</p></div>
+      </div>
+    </section>
+
+    <div class="contact">
+      <h2
+        data-ru="Связаться и найти офис"
+        data-ua="Зв’язатися та знайти офіс"
+        data-pl="Kontakt i lokalizacja biura">
+        Связаться и найти офис
+      </h2>
+
+      <p>WhatsApp / Telegram: +48 791 178 489</p>
+      <p>Adres: Jaworzyńska 254, Legnica</p>
+
+      <div class="buttons" style="justify-content:center; margin-top:20px;">
+        <a class="btn whatsapp" href="https://wa.me/48791178489" target="_blank">WhatsApp</a>
+        <a class="btn telegram" href="https://t.me/natya_2024" target="_blank">Telegram</a>
+      </div>
+
+      <iframe
+        src="https://www.google.com/maps?q=Jaworzy%C5%84ska%20254%2C%20Legnica&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 No Name. Ubezpieczenia w Polsce.
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      const elements = document.querySelectorAll("[data-" + lang + "]");
+
+      elements.forEach(function(element) {
+        element.textContent = element.getAttribute("data-" + lang);
+      });
+    }
+  </script>
+
+</body>
+</html>
